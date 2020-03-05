@@ -1,7 +1,5 @@
 rm(list=ls())
-#setwd("C:\\Users\\SonyaIlieva\\Desktop\\UNI\\R\\Summer semester\\NETERA")
 #setwd("D:\\Preslava\\uni\\Business Analytics\\Boryana Saturday\\NETERA")
-setwd("C:\\Users\\Daria\\Desktop\\business analytics\\Business analytics 2 sem\\Netera case")
 
 load("joined_data.RData")
 # can_dd=read.csv("can_bus_events.csv", na.string=c("","NA"," ","?","\\N"),stringsAsFactors = F)
@@ -208,8 +206,8 @@ leaflet() %>%
   addTiles(options = providerTileOptions(noWrap = TRUE), group="background 2") %>%
   
   # Add 2 marker groups
-  addCircleMarkers(data=data_red, lng=~LONG , lat=~LAT, radius=5 , color="black",  fillColor="red", stroke = TRUE, fillOpacity = 0.8, group="Red") %>%
-  addCircleMarkers(data=data_green, lng=~LONG , lat=~LAT, radius=5 , color="black",  fillColor="green", stroke = TRUE, fillOpacity = 0.8, group="Blue") %>%
+  addCircleMarkers(data=data_red, lng=~LONG , lat=~LAT, radius=5 , color="black",Â  fillColor="red", stroke = TRUE, fillOpacity = 0.8, group="Red") %>%
+  addCircleMarkers(data=data_green, lng=~LONG , lat=~LAT, radius=5 , color="black",Â  fillColor="green", stroke = TRUE, fillOpacity = 0.8, group="Blue") %>%
   
   # Add the control widget
   addLayersControl(overlayGroups = c("Non-eco","Eco") , baseGroups = c("background 2"), options = layersControlOptions(collapsed = FALSE))
@@ -262,8 +260,8 @@ leaflet() %>%
   addTiles(options = providerTileOptions(noWrap = TRUE), group="background 2") %>%
   
   # Add 2 marker groups
-  addCircleMarkers(data=data2_red, lng=~LONG , lat=~LAT, radius=5 , color="black",  fillColor="red", stroke = TRUE, fillOpacity = 0.8, group="Red") %>%
-  addCircleMarkers(data=data2_green, lng=~LONG , lat=~LAT, radius=5 , color="black",  fillColor="green", stroke = TRUE, fillOpacity = 0.8, group="Green") %>%
+  addCircleMarkers(data=data2_red, lng=~LONG , lat=~LAT, radius=5 , color="black",Â  fillColor="red", stroke = TRUE, fillOpacity = 0.8, group="Red") %>%
+  addCircleMarkers(data=data2_green, lng=~LONG , lat=~LAT, radius=5 , color="black",Â  fillColor="green", stroke = TRUE, fillOpacity = 0.8, group="Green") %>%
   
   # Add the control widget
   addLayersControl(overlayGroups = c("Non-economy","Economy") , baseGroups = c("background 2"), options = layersControlOptions(collapsed = FALSE))
@@ -317,8 +315,8 @@ leaflet() %>%
   addTiles(options = providerTileOptions(noWrap = TRUE), group="background 2") %>%
   
   # Add 2 marker groups
-  addCircleMarkers(data=data3_red, lng=~LONG , lat=~LAT, radius=5 , color="black",  fillColor="red", stroke = TRUE, fillOpacity = 0.8, group="Red") %>%
-  addCircleMarkers(data=data3_green, lng=~LONG , lat=~LAT, radius=5 , color="black",  fillColor="green", stroke = TRUE, fillOpacity = 0.8, group="Green") %>%
+  addCircleMarkers(data=data3_red, lng=~LONG , lat=~LAT, radius=5 , color="black",Â  fillColor="red", stroke = TRUE, fillOpacity = 0.8, group="Red") %>%
+  addCircleMarkers(data=data3_green, lng=~LONG , lat=~LAT, radius=5 , color="black",Â  fillColor="green", stroke = TRUE, fillOpacity = 0.8, group="Green") %>%
   
   # Add the control widget
   addLayersControl(overlayGroups = c("Dangerous","Safe") , baseGroups = c("background 2"), options = layersControlOptions(collapsed = FALSE))
