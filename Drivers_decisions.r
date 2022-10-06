@@ -1,5 +1,5 @@
 rm(list=ls())
-#setwd("D:\\Preslava\\uni\\Business Analytics\\Boryana Saturday\\NETERA")
+#setwd("D:\\Preslava\\uni\\Business Analytics\\Boryana Saturday\\NETERRA")
 
 load("joined_data.RData")
 # can_dd=read.csv("can_bus_events.csv", na.string=c("","NA"," ","?","\\N"),stringsAsFactors = F)
@@ -31,7 +31,7 @@ can_gps=can_gps[,!names(can_gps) %in% DD$vn[DD$vna>=0.2]]
 DD=DD[-which(DD$vna>=0.2),]
 names(can_gps)
 
-#Replacing the missing calues with 0
+#Replacing the missing values with 0
 sum(is.na(can_gps$device_id))
 can_gps[is.na(can_gps)]=0
 
